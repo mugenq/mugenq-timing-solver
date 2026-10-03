@@ -1,0 +1,29 @@
+{
+  "audio_file": "songs\\reign_of_fear\\song.mp3",
+  "osu_file": "songs\\reign_of_fear\\song.osu",
+  "global_bpm_raw": 182.41990221883717,
+  "global_bpm_used": 182.4,
+  "timing_section_count": 41,
+  "diagnostic_shift_ms": -20.0,
+  "object_summary": {
+    "count": 1587,
+    "mean_ms": 3.3068278895500756,
+    "median_ms": 1.6567242280700611,
+    "p90_ms": 7.344862900617954,
+    "p95_ms": 10.369604862520971,
+    "maximum_ms": 40.7805686374445,
+    "within_2ms": 0.5519848771266541,
+    "within_5ms": 0.7775677378701953,
+    "within_10ms": 0.943289224952741,
+    "within_20ms": 0.9848771266540642,
+    "within_40ms": 0.998109640831758
+  },
+  "redline_metrics": {
+    "true_positives": 2,
+    "false_positives": 38,
+    "false_negatives": 15,
+    "precision": 0.05,
+    "recall": 0.11764705882352941,
+    "f1": 0.07017543859649122
+  }
+}
