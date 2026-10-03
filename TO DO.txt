@@ -1,0 +1,2 @@
+features that could help
+known beat anchor points: give the model known beats or known red lines with known BPM so the model incorporates them as true information

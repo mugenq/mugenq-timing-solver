@@ -1,0 +1,29 @@
+{
+  "audio_file": "songs\\yuyoyuppe_leia\\song.mp3",
+  "osu_file": "songs\\yuyoyuppe_leia\\song.osu",
+  "global_bpm_raw": 189.94628871261455,
+  "global_bpm_used": 189.9,
+  "timing_section_count": 9,
+  "diagnostic_shift_ms": -36.5,
+  "object_summary": {
+    "count": 346,
+    "mean_ms": 7.139363233495536,
+    "median_ms": 3.271361941020512,
+    "p90_ms": 25.504572760979727,
+    "p95_ms": 26.950465336035734,
+    "maximum_ms": 33.519580659856274,
+    "within_2ms": 0.3208092485549133,
+    "within_5ms": 0.546242774566474,
+    "within_10ms": 0.791907514450867,
+    "within_20ms": 0.8930635838150289,
+    "within_40ms": 1.0
+  },
+  "redline_metrics": {
+    "true_positives": 1,
+    "false_positives": 7,
+    "false_negatives": 26,
+    "precision": 0.125,
+    "recall": 0.037037037037037035,
+    "f1": 0.05714285714285714
+  }
+}
