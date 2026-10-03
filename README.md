@@ -4,6 +4,12 @@ Experimental rhythm-analysis software for recovering timing structure from music
 
 The current implementation estimates tempo, phase, timing sections, and beat-grid candidates from audio. Predictions are evaluated separately against osu! beatmaps, so map data is used as ground truth for evaluation rather than as input to the predictor.
 
+## Motivation
+
+Timing rhythm-game maps can become difficult when a song contains ambiguous transients, changing rhythmic emphasis, or multiple plausible timing interpretations. BeatSolver began as an attempt to generate an independent, interpretable timing proposal from audio that a mapper or reviewer can compare against an existing map.
+
+The goal is not to replace expert judgment, but to provide another source of evidence when timing decisions are uncertain.
+
 ## Project focus
 
 This repository explores a practical question: how much rhythm-game timing structure can be recovered directly from audio with interpretable signal-processing methods?
@@ -17,6 +23,20 @@ The work includes:
 - one-to-one onset/grid evaluation;
 - explicit separation between prediction and evaluation;
 - iterative benchmarking across experimental versions.
+
+## Results so far
+
+Saved experiments show that predicted grids can align closely with mapped hit objects once a global phase offset is accounted for.
+
+| Version / song | Objects | Diagnostic shift | Median error | Within 10 ms | Within 20 ms | Boundary F1 |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| v0.4 `sakuzyo_that_day` | 132 | -40.5 ms | 0.43 ms | 87.1% | 90.9% | 0.000 |
+| v0.5 `yuyoyuppe_leia` | 346 | -36.5 ms | 3.27 ms | 79.2% | 89.3% | 0.057 |
+| v0.7 `reign_of_fear` | 1,587 | -20.0 ms | 1.66 ms | 94.3% | 98.5% | 0.070 |
+
+These results suggest that local beat-grid alignment can be strong on some tracks, while timing-section/redline detection remains substantially weaker. For example, the v0.7 benchmark places 94.3% of 1,587 mapped objects within 10 ms of the evaluated grid after a -20 ms diagnostic alignment, but its boundary F1 score is only 0.070.
+
+These are experimental snapshots rather than a controlled cross-song benchmark: the saved runs use different songs and different versions of the algorithm. The object-error figures above are measured after diagnostic global phase alignment and should not be interpreted as general accuracy claims.
 
 ## Main files
 
@@ -39,6 +59,12 @@ The cleaned v0.5 line includes:
 - onset-derived phase candidates instead of a 2,000-step brute-force scan;
 - separate evaluation of the initial timing anchor and later section boundaries;
 - corrected summaries, paths, benchmark output, and duplicate keys.
+
+## Development direction
+
+Earlier versions concentrated on direct signal-processing approaches to tempo, phase, and section detection. Iteration exposed a useful separation between problems: local beat-grid recovery can often be handled reasonably well with interpretable signal-processing methods, while detecting structural timing changes is substantially harder.
+
+The project is therefore moving toward hybrid approaches in which conventional signal processing handles explainable rhythmic structure and learning or search methods are introduced only where they provide a clear advantage.
 
 ## Setup
 
