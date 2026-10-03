@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Local audio and beatmaps
+songs/**/*.mp3
+songs/**/*.wav
+songs/**/*.flac
+songs/**/*.ogg
+songs/**/*.osu
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
