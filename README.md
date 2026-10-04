@@ -69,6 +69,10 @@ Earlier versions concentrated on direct signal-processing approaches to tempo, p
 
 The project is therefore moving toward hybrid approaches in which conventional signal processing handles explainable rhythmic structure and learning or search methods are introduced only where they provide a clear advantage.
 
+## Authorship and LLM assistance
+
+The project concept, signal-processing approach, algorithm choices, experimental design, and development direction are my own. LLM assistance has been used for implementation support in technical integration/plumbing and display/UI code. I review and validate the resulting code and remain responsible for the design and behavior of the project.
+
 ## Setup
 
 ```bash
