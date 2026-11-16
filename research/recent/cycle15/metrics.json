@@ -1,0 +1,16 @@
+{
+  "monte_carlo_samples_per_boundary": 100000,
+  "weights_tested": 41,
+  "criteria_smallest_weight": {
+    "0.9": 0.0475,
+    "0.95": 0.055,
+    "0.975": 0.06,
+    "0.99": 0.0675
+  },
+  "frozen_weight": 0.055,
+  "frozen_weight_min_boundary_success": 0.96416,
+  "frozen_weight_mean_boundary_success": 0.9937966666666666,
+  "weakest_boundary_at_0p055": 64.101,
+  "empirical_null_fpr_mean": 0.012499999999999999,
+  "empirical_null_fpr_max": 0.0125
+}
