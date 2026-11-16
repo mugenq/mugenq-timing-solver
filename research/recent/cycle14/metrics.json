@@ -1,0 +1,12 @@
+{
+  "frozen_reset_weight": 0.055,
+  "weight_freeze_rule": "P10 calibrated reset evidence must exceed existing .014/ms physical change cost at all six persisted reset geometries",
+  "minimum_required_weight": 0.04752257000373203,
+  "safety_margin": 0.007477429996267972,
+  "known_transitions_recovered": 6,
+  "known_transition_count": 6,
+  "null_trials": 500,
+  "null_exact_equivalence_rate": 1.0,
+  "reset_28386_net_margin_p10": 0.006818150438217901,
+  "reset_64101_net_margin_p10": 0.003304241119731023
+}
