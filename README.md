@@ -41,6 +41,19 @@ These results suggest that local beat-grid alignment can be strong on some track
 
 These are experimental snapshots rather than a controlled cross-song benchmark: the saved runs use different songs and different versions of the algorithm. The object-error figures above are measured after diagnostic global phase alignment and should not be interpreted as general accuracy claims.
 
+## Later research checkpoints
+
+The repository now also includes preserved research snapshots under [`research/`](research/), with an apples-to-apples caveat table in [`research/RESULTS_COMPARISON.md`](research/RESULTS_COMPARISON.md).
+
+Some useful checkpoints:
+
+- A source-held-out synthetic pruning experiment retained **1,016/1,016 true events with 2,438 candidates**, about **2.4 candidates per true event**, but the same pruning rule transferred poorly to a real song. This is why synthetic recall is reported separately from real-song performance.
+- A song-specific Reign of Fear proof solver achieved **1,587/1,587 mapped objects within 5 ms**, with 1.681 ms median error. Its topology and transition states were developed on that song, so it is evidence that the acoustic candidates contain enough timing information rather than a held-out generalization result.
+- On the more automatic `sakuzyo - that day` experiment, the latest persisted audio-selected semi-Markov path reaches **96/132 objects within 5 ms using 8 timing points**. Candidate reset locations are substantially better than the selected path, making reset/BPM sequence selection the current bottleneck.
+- Recent Cycles 14-16 test calibrated residual evidence for those resets. The latest cycle found an objective mismatch between dynamic-programming path generation and final path selection. It therefore reports a correctness fix and controlled diagnostics rather than inventing a new end-to-end accuracy number.
+
+The comparison document keeps song-specific proofs, transfer tests, synthetic pruning, and controlled component experiments explicitly separated.
+
 ## Main files
 
 - `beattimer_core.py` — audio-only timing predictor.
@@ -49,6 +62,7 @@ These are experimental snapshots rather than a controlled cross-song benchmark: 
 - `beattimer_evaluator_v0.5.ipynb` — evaluation and reporting notebook.
 - `benchmark_dump/` — saved benchmark outputs.
 - `history/` — selected earlier implementations showing the development path.
+- `research/RESULTS_COMPARISON.md` — historical bests and recent research checkpoints with scope/limitations.
 
 ## v0.5 changes
 
