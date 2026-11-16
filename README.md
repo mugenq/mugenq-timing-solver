@@ -63,6 +63,8 @@ The comparison document keeps song-specific proofs, transfer tests, synthetic pr
 - `benchmark_dump/` — saved benchmark outputs.
 - `history/` — selected earlier implementations showing the development path.
 - `research/RESULTS_COMPARISON.md` — historical bests and recent research checkpoints with scope/limitations.
+- `research/FULL_HISTORY.md` — version-by-version development history, results, limitations, and phase-by-phase human/LLM attribution.
+- `research/VERSION_INDEX.csv` — compact machine-readable version/result/attribution index.
 
 ## v0.5 changes
 
@@ -85,7 +87,9 @@ The project is therefore moving toward hybrid approaches in which conventional s
 
 ## Authorship and LLM assistance
 
-The project concept, signal-processing approach, algorithm choices, experimental design, and development direction are my own. LLM assistance has been used for implementation support in technical integration/plumbing and display/UI code. I review and validate the resulting code and remain responsible for the design and behavior of the project.
+The original project problem, motivation, product goal, core signal-processing direction, and evaluation philosophy are mine. LLM involvement has varied substantially by phase: early versions were co-developed with implementation assistance, while later scheduled R&D cycles used LLMs more heavily to propose, implement, and analyze controlled experiments under objectives and constraints I set. I reviewed the evidence and chose the development direction.
+
+I do not claim that every line of later experimental code was manually written by me. See [`research/FULL_HISTORY.md`](research/FULL_HISTORY.md) for phase-by-phase attribution and the evidence behind each result.
 
 ## Setup
 
