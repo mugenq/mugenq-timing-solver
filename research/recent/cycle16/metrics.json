@@ -1,0 +1,18 @@
+{
+  "original_dp_change_penalties": [
+    0.0,
+    0.002,
+    0.005,
+    0.01,
+    0.018
+  ],
+  "original_audio_selector_change_penalty_per_ms": 0.014,
+  "frozen_reset_weight": 0.055,
+  "known_reset_bonus_sum": 1.4994003812726908,
+  "known_reset_common_change_cost_sum": 0.35000000000000003,
+  "known_reset_net_sum": 1.1494003812726912,
+  "audio_selected_halfms_total_interval_change_ms": 28.0,
+  "audio_selected_common_change_penalty": 0.392,
+  "source_has_reset_term_in_common_audio_score": false,
+  "source_parameter_sweep_count": 70
+}
